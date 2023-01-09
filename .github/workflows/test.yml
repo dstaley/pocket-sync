@@ -43,7 +43,7 @@ jobs:
         if: matrix.platform != 'macos-latest'
         run: rustup target add ${{ matrix.target }}
       - name: use patched ring (Windows ARM64)
-        if: matrix.platform == 'windows' && matrix.target == 'aarch64-pc-windows-msvc'
+        if: matrix.platform == 'windows-latest' && matrix.target == 'aarch64-pc-windows-msvc'
         shell: pwsh
         run: |
           @('', '[patch.crates-io]',
